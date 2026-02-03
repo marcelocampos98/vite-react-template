@@ -3,22 +3,73 @@
 * {
   font-family: 'Poppins', sans-serif;
 }
+
+:root {
+  --base-screen: 1920px;
+  --icon-size: 64px;
+  --font-scale: clamp(0.75, calc(100vw / var(--base-screen)), 1);
+}
+
 body {
   margin-top: 50px;
 }
 
 p {
-  font-size: 22px;
+  font-size: calc(22px * var(--font-scale));
   font-weight: 400;
+  text-align: center;
 }
 
 .link-button {
-  width: 460px;
+  width: 100%;
+  max-width: 460px;
   border: 1px solid rgb(236, 1, 140);
   color: rgb(236, 1, 140);
   padding: 14px;
   text-align: center;
-  font-size: 24px;
+  font-size: calc(24px * var(--font-scale));
   font-weight: 700;
   font-style: normal;
+}
+
+.faq {
+  font-size: calc(30px * var(--font-scale));
+  font-weight: 700;
+  color: white;
+  background-color: rgb(236, 1, 140);
+  border-radius: 40px;
+  padding: 10px 20px;
+}
+
+.subtitle {
+  color: black;
+  font-weight: normal;
+  font-size: calc(16px * var(--font-scale));
+}
+
+/* Container */
+.social-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: inherit;
+}
+
+/* Ícone */
+.social-icon {
+  width: var(--icon-size);
+  height: var(--icon-size);
+
+  /* mantém proporção perfeita */
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+
+  /* escala proporcional à largura da tela */
+  transform: scale(var(--font-scale));
+
+  /* evita deslocamento visual */
+  transform-origin: center;
+
+  /* evita distorção em PNG */
+  image-rendering: auto;
 }
