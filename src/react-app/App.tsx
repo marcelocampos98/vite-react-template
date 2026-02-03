@@ -39,7 +39,7 @@ function App() {
           </p>
           <a
             className="link-button flex flex-col"
-            href="https://criativegraficacg.meloja.com.br/"
+            href="https://maapp.com.br/criativegraficacg"
             target="_blank"
           >
             <span>ORÇAMENTO DE FACHADA</span>
